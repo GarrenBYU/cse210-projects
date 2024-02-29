@@ -5,27 +5,37 @@ class Program
     static void Main(string[] args)
     {
         Console.Write("What is your grade percentage? ");
-        String number = Console.ReadLine();
+        string number = Console.ReadLine();
         int grade = int.Parse(number);
+        string letterGrade;
         if (grade >= 90)
         {
-            Console.WriteLine("A");
+            letterGrade = "A";
         }
         else if (grade >= 80)
         {
-            Console.WriteLine("B");
+            letterGrade = "B";
         }
         else if (grade >= 70)
         {
-            Console.WriteLine("C");
+            letterGrade = "C";
         }
         else if (grade >= 60)
         {
-            Console.WriteLine("D");
+            letterGrade = "D";
         }
-        else if (grade < 60)
+        else
         {
-            Console.WriteLine("F");
+            letterGrade = "F";
+        }
+
+        Console.WriteLine($"You're grade is {letterGrade}");
+        if (grade >= 70)
+        {
+            Console.WriteLine("Congrats you passed the class. You got your next class for sure!");
+        }
+        else{
+            Console.WriteLine("I am afraid you didnt make the cut. You are going to need to retake this course. You got this next time.");
         }
     }
 }
